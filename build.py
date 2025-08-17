@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import markdown
+import re
 
 
 CSS_PATH = "style.css"
@@ -23,7 +24,7 @@ class MarkdownConverter:
     def convert(self) -> None:
         for path in self.pages:
             content = get_file_contents(path)
-            html = markdown.markdown(content)
+            html = wrap_code_with_pre(markdown.markdown(content))
             output_file = Path(convert_path(self.site_path, path))
             build_page(output_file, html, self.css)
 
@@ -47,6 +48,11 @@ def build_page(output_file: Path, html: str, css: str):
     output_file.parent.mkdir(exist_ok=True, parents=True)
     head = f"<head><style>{css}</style></head>"
     output_file.write_text(f"{head}\n<body>{html}\n</body>")
+
+
+def wrap_code_with_pre(text: str) -> str:
+    pattern = re.compile(r"<code>(.*?)</code>", re.DOTALL)
+    return pattern.sub(r"<pre><code>\1</code></pre>", text)
 
 
 if __name__ == "__main__":

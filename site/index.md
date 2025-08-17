@@ -6,7 +6,7 @@ Hello, world!
 
 Here is an example Python program entrypoint:
 
-```python
+```
 if __name__ == "__main__":
     main()
 ```
