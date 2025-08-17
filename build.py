@@ -1,6 +1,3 @@
-
-
-
 CSS_PATH = "style.css"
 
 
@@ -13,7 +10,6 @@ class MarkdownConverter:
         return get_file_contents(f"{site_path}/{CSS_PATH}")
 
     def _load_pages(self, site_path: str) -> list[str]:
-        
         return []
 
     def convert(self) -> None:
