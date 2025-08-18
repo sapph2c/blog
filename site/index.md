@@ -1,24 +1,15 @@
 # sapph2c.dev
 
-Hello, world!
+I am a software engineer on NVIDIA’s Security Tools Development team. I graduated in May 2025 from the Rochester Institute of Technology, where I studied Computing Security.”
 
-## Code block
+## Links
 
-Here is an example Python program entrypoint:
-
-```
-if __name__ == "__main__":
-    main()
-```
+- [GitHub](https://github.com/sapph2c)
+- [LinkedIn](https://www.linkedin.com/in/ashley-nikirk/)
 
 ## Posts
 
 ### August 2025
 
-[Example](posts/example.html)
-
-## References: 
-
-- [Wikipedia](https://www.wikipedia.org)
-- [Twitter](https://x.com)
+[Building the Blog](posts/blog.html)
 
